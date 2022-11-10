@@ -99,12 +99,12 @@ public class ArrayLinearList implements LinearList {
 			else {
 				s.append(elementArray[i].toString() + ", ");
 			}
-			// remove last ", "
-			if (size > 0) {
-				s.delete(s.length() - 2, s.length());
-				s.append("]");
-			}
 		}
+		// remove last ", "
+		if (size > 0) {
+			s.delete(s.length() - 2, s.length());
+		}
+		s.append("]");
 		return new String(s);
 	}
 }

@@ -14,7 +14,7 @@ public class ToDo {
 			
 			switch(menuNumber) {
 			case 1:
-				arrayList.outputList();
+				System.out.println(arrayList.outputList());
 				break;
 			case 2:
 				addTodo();
@@ -65,8 +65,9 @@ public class ToDo {
 	}
 	
 	public static void removeTodo() {
-		System.out.println("Please type the index of the todo you want to remove: ");
-		
+		System.out.println("Remove Item");
+		System.out.println("---------------------------------------");
+		System.out.println("Please type the index of the todo you wish to remove (0-" + (arrayList.size() - 1) + ")");
 		Scanner removetodo = new Scanner(System.in);
 		int num = removetodo.nextInt();
 		arrayList.remove(num);
@@ -79,7 +80,8 @@ public class ToDo {
 	public static void searchTodo() {
 		System.out.println("Please type the todo you wish to find: ");
 		Scanner search = new Scanner(System.in);
-		arrayList.indexOf(search);
+		String indexof = search.nextLine();
+		System.out.println(arrayList.indexOf(indexof));
 	}
 	
 	public static boolean checkTodo() {
