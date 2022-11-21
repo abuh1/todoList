@@ -109,7 +109,7 @@ public class ToDo {
 	public static boolean checkTodo() {
 		System.out.println("Please type the todo you wish to check: ");
 		Scanner check = new Scanner(System.in);
-		String checkTodo = check.nextLine();
+		String checkTodo = check.nextLine().toLowerCase();
 		
 		if (arrayList.indexOf(checkTodo) != -1) {
 			System.out.println(">This todo is in the list.");
